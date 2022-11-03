@@ -9,8 +9,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	_ "github.com/go-sql-driver/mysql"
 
-    "github.com/amthorn/task_wizard/ent"
-    // "github.com/amthorn/task_wizard/ent/project"
+    "github.com/amthorn/task_wizard_schema/ent"
+    "github.com/amthorn/task_wizard_schema/ent/project"
 	pb "github.com/amthorn/task_wizard/services/project_service/src/proto"
 
 )

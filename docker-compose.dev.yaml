@@ -2,8 +2,7 @@ version: '3.9'
 services:
   project_service:
     build: 
-      context: .
-      dockerfile: ./src/services/project_service/Dockerfile
+      context: ./src/services/project_service
       args:
         ENVIRONMENT: dev
   db:

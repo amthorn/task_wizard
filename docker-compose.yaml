@@ -4,8 +4,7 @@ services:
     depends_on:
       - db
     build: 
-      context: .
-      dockerfile: ./src/services/project_service/Dockerfile
+      context: ./src/services/project_service
       args:
         ENVIRONMENT: prod
     environment:
