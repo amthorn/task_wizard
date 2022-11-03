@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/amthorn/task_wizard/src/ent/predicate"
-	"github.com/amthorn/task_wizard/src/ent/project"
-	"github.com/amthorn/task_wizard/src/ent/user"
+	"github.com/amthorn/task_wizard/ent/predicate"
+	"github.com/amthorn/task_wizard/ent/project"
+	"github.com/amthorn/task_wizard/ent/user"
 	"github.com/google/uuid"
 
 	"entgo.io/ent"

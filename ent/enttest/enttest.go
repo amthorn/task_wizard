@@ -5,12 +5,12 @@ package enttest
 import (
 	"context"
 
-	"github.com/amthorn/task_wizard/src/ent"
+	"github.com/amthorn/task_wizard/ent"
 	// required by schema hooks.
-	_ "github.com/amthorn/task_wizard/src/ent/runtime"
+	_ "github.com/amthorn/task_wizard/ent/runtime"
 
 	"entgo.io/ent/dialect/sql/schema"
-	"github.com/amthorn/task_wizard/src/ent/migrate"
+	"github.com/amthorn/task_wizard/ent/migrate"
 )
 
 type (

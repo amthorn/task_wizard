@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"entgo.io/ent/dialect/sql"
-	"github.com/amthorn/task_wizard/src/ent/project"
+	"github.com/amthorn/task_wizard/ent/project"
 )
 
 // Project is the model entity for the Project schema.

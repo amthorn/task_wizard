@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"entgo.io/ent/dialect/sql"
-	"github.com/amthorn/task_wizard/src/ent/user"
+	"github.com/amthorn/task_wizard/ent/user"
 	"github.com/google/uuid"
 )
 

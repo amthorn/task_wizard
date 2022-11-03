@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/amthorn/task_wizard/src/ent"
+	"github.com/amthorn/task_wizard/ent"
 )
 
 // The ProjectFunc type is an adapter to allow the use of ordinary

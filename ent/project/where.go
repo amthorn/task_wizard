@@ -4,7 +4,7 @@ package project
 
 import (
 	"entgo.io/ent/dialect/sql"
-	"github.com/amthorn/task_wizard/src/ent/predicate"
+	"github.com/amthorn/task_wizard/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

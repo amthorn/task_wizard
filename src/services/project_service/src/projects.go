@@ -10,7 +10,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 
     "github.com/amthorn/task_wizard/ent"
-    "github.com/amthorn/task_wizard/ent/project"
+    // "github.com/amthorn/task_wizard/ent/project"
 	pb "github.com/amthorn/task_wizard/services/project_service/src/proto"
 
 )

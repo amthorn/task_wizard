@@ -19,7 +19,7 @@ WORKDIR /service
 
 COPY --from=build /service /service
 
-COPY src/ent ./src/ent
+COPY ./ent ./ent
 
 WORKDIR /service/src/services/project_service
 

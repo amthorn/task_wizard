@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/amthorn/task_wizard/src/ent/migrate"
+	"github.com/amthorn/task_wizard/ent/migrate"
 	"github.com/google/uuid"
 
-	"github.com/amthorn/task_wizard/src/ent/project"
-	"github.com/amthorn/task_wizard/src/ent/user"
+	"github.com/amthorn/task_wizard/ent/project"
+	"github.com/amthorn/task_wizard/ent/user"
 
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
@@ -186,7 +186,7 @@ func (c *ProjectClient) DeleteOne(pr *Project) *ProjectDeleteOne {
 	return c.DeleteOneID(pr.ID)
 }
 
-// DeleteOne returns a builder for deleting the given entity by its id.
+// DeleteOneID returns a builder for deleting the given entity by its id.
 func (c *ProjectClient) DeleteOneID(id int) *ProjectDeleteOne {
 	builder := c.Delete().Where(project.ID(id))
 	builder.mutation.id = &id
@@ -276,7 +276,7 @@ func (c *UserClient) DeleteOne(u *User) *UserDeleteOne {
 	return c.DeleteOneID(u.ID)
 }
 
-// DeleteOne returns a builder for deleting the given entity by its id.
+// DeleteOneID returns a builder for deleting the given entity by its id.
 func (c *UserClient) DeleteOneID(id uuid.UUID) *UserDeleteOne {
 	builder := c.Delete().Where(user.ID(id))
 	builder.mutation.id = &id

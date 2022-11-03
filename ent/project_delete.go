@@ -9,8 +9,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/amthorn/task_wizard/src/ent/predicate"
-	"github.com/amthorn/task_wizard/src/ent/project"
+	"github.com/amthorn/task_wizard/ent/predicate"
+	"github.com/amthorn/task_wizard/ent/project"
 )
 
 // ProjectDelete is the builder for deleting a Project entity.

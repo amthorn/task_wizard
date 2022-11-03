@@ -5,9 +5,9 @@ package ent
 import (
 	"time"
 
-	"github.com/amthorn/task_wizard/src/ent/project"
-	"github.com/amthorn/task_wizard/src/ent/schema"
-	"github.com/amthorn/task_wizard/src/ent/user"
+	"github.com/amthorn/task_wizard/ent/project"
+	"github.com/amthorn/task_wizard/ent/schema"
+	"github.com/amthorn/task_wizard/ent/user"
 	"github.com/google/uuid"
 )
 

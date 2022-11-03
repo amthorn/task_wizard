@@ -5,7 +5,7 @@ build-generator:
 
 generate:
 	# docker run -it -v $(PWD):/src -w /src task_wizard/generator:latest --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative $${SERVICE_PATH}/proto/service.proto
-	docker run -it -v ${PWD}:/task_wizard -w /task_wizard/src golang:latest go generate ./ent
+	docker run -it -v ${PWD}:/task_wizard -w /task_wizard golang:latest go generate ./ent
 
 up $(ENVIRONMENT):
 	@if [[ "$(ENVIRONMENT)" = "prod" ]]; then \

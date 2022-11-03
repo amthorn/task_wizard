@@ -10,8 +10,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/amthorn/task_wizard/src/ent/predicate"
-	"github.com/amthorn/task_wizard/src/ent/project"
+	"github.com/amthorn/task_wizard/ent/predicate"
+	"github.com/amthorn/task_wizard/ent/project"
 )
 
 // ProjectUpdate is the builder for updating Project entities.
@@ -119,11 +119,7 @@ func (pu *ProjectUpdate) sqlSave(ctx context.Context) (n int, err error) {
 		}
 	}
 	if value, ok := pu.mutation.Name(); ok {
-		_spec.Fields.Set = append(_spec.Fields.Set, &sqlgraph.FieldSpec{
-			Type:   field.TypeString,
-			Value:  value,
-			Column: project.FieldName,
-		})
+		_spec.SetField(project.FieldName, field.TypeString, value)
 	}
 	if n, err = sqlgraph.UpdateNodes(ctx, pu.driver, _spec); err != nil {
 		if _, ok := err.(*sqlgraph.NotFoundError); ok {
@@ -266,11 +262,7 @@ func (puo *ProjectUpdateOne) sqlSave(ctx context.Context) (_node *Project, err e
 		}
 	}
 	if value, ok := puo.mutation.Name(); ok {
-		_spec.Fields.Set = append(_spec.Fields.Set, &sqlgraph.FieldSpec{
-			Type:   field.TypeString,
-			Value:  value,
-			Column: project.FieldName,
-		})
+		_spec.SetField(project.FieldName, field.TypeString, value)
 	}
 	_node = &Project{config: puo.config}
 	_spec.Assign = _node.assignValues

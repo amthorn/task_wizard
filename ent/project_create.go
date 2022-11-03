@@ -9,7 +9,7 @@ import (
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/amthorn/task_wizard/src/ent/project"
+	"github.com/amthorn/task_wizard/ent/project"
 )
 
 // ProjectCreate is the builder for creating a Project entity.
@@ -149,11 +149,7 @@ func (pc *ProjectCreate) createSpec() (*Project, *sqlgraph.CreateSpec) {
 		}
 	)
 	if value, ok := pc.mutation.Name(); ok {
-		_spec.Fields = append(_spec.Fields, &sqlgraph.FieldSpec{
-			Type:   field.TypeString,
-			Value:  value,
-			Column: project.FieldName,
-		})
+		_spec.SetField(project.FieldName, field.TypeString, value)
 		_node.Name = value
 	}
 	return _node, _spec
