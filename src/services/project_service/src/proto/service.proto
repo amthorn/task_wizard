@@ -1,0 +1,23 @@
+syntax = "proto3";
+package main;
+option go_package="github.com/amthorn/task_wizard/services/project_service/src/proto";
+
+service ProjectService {
+    rpc ListProjects(Empty) returns (ProjectList) {}
+    rpc GetProject(ProjectId) returns (Project) {}
+    rpc CreateProject(Project) returns (Project) {}
+    rpc DeleteProject(ProjectId) returns (Empty) {}
+}
+
+message Empty {}
+
+message ProjectId { int64 id = 1; }
+
+message Project {
+    int64 id = 1;
+    string name = 2;
+}
+
+message ProjectList {
+    repeated Project projects = 1;
+}

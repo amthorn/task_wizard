@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  project_service:
+    build: 
+      context: .
+      dockerfile: ./src/services/project_service/Dockerfile
+      args:
+        ENVIRONMENT: dev
+  db:
+    ports:
+      - 3306:3306

@@ -1,0 +1,4 @@
+.vscode/
+.history/
+.pytest_cache
+pkg/
